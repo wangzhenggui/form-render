@@ -1,5 +1,6 @@
 import { Form, Input, Select, Checkbox, Switch, Button } from 'antd';
 import Student from './Student';
+import Card from './Card';
 import CustomizeString from './CustomizeString';
 import CustomizeDataSource from './CustomizeDataSource';
 
@@ -16,4 +17,5 @@ export default {
   string: CustomizeString,
   source: CustomizeDataSource,
   student: Student,
+  card: Card,
 };

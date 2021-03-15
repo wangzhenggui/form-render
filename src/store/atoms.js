@@ -11,8 +11,8 @@ export const formAtom = atom({
     type: 'form',
     props: {
       colon: true,
-      labelCol: { span: 8 },
-      wrapperCol: { span: 16 },
+      labelCol: { span: 4 },
+      wrapperCol: { span: 20 },
       onFinish: (values) => console.log(values),
     },
     children: [
@@ -64,8 +64,19 @@ export const formAtom = atom({
       {
         type: 'form.item',
         props: {
+          label: '自定义组件',
+          name: 'customizeComponent',
+        },
+        children: {
+          type: '@widget:card',
+          props: {},
+        },
+      },
+      {
+        type: 'form.item',
+        props: {
           name: 'remember',
-          wrapperCol: { offset: 8, span: 16 },
+          wrapperCol: { offset: 4, span: 20 },
           valuePropName: 'checked', // 这个必须有，不加会获取不到值
         },
         children: {
@@ -82,7 +93,7 @@ export const formAtom = atom({
       {
         type: 'form.item',
         props: {
-          wrapperCol: { offset: 8, span: 16 },
+          wrapperCol: { offset: 4, span: 20 },
           name: 'switch',
         },
         children: {
@@ -93,7 +104,7 @@ export const formAtom = atom({
       {
         type: 'form.item',
         props: {
-          wrapperCol: { offset: 8, span: 16 },
+          wrapperCol: { offset: 4, span: 20 },
         },
         children: {
           type: 'button',

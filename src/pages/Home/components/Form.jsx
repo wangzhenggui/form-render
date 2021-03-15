@@ -39,7 +39,7 @@ const CustomizeForm = () => {
   const [formState] = useRecoilState(formAtom);
   return (
     <RecoilRoot>
-      <React.Suspense fallback={<Spin loading />}>
+      <React.Suspense fallback={<Spin />}>
         <div className={styles.fromContainer}>{renderForm(formState)}</div>
       </React.Suspense>
     </RecoilRoot>
