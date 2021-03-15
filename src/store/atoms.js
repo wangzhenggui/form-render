@@ -50,16 +50,14 @@ export const formAtom = atom({
           name: 'studentName',
         },
         children: {
-          type: 'select',
-          props: {},
+          type: '@widget:source',
+          props: {
+            selector: 'studentName',
+            valuePropName: 'options',
+          },
           children: {
-            type: 'select.option',
+            type: 'select',
             props: {},
-            children: {
-              type: '@widget:student',
-              props: {},
-            },
-            data: '@data:studentName',
           },
         },
       },
