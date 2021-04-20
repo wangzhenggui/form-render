@@ -131,3 +131,8 @@ export const dataSchemaAtom = atom({
     password: '',
   },
 });
+
+export const leftComponentsAtom = atom({
+  key: 'LeftComponentsAtom',
+  default: ['Input', 'InputNumber', 'Switch'],
+});
